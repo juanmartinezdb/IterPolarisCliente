@@ -1,4 +1,4 @@
-# Project: ITERPOLARISCLIENTE
+# Project: ITER POLARIS (CRUD)
 
 ## Description
 The project consists of building a CRUD structure with a 1:N relationship between constellations and stars, where each constellation represents a project and each star represents an item related to that project. Items could include tasks, habits, or diary entries associated with the process. The specific functionalities are still being defined, but the goal is to create an intuitive management system that helps track progress in various personal or professional projects, gamifying the process and making it enjoyable and fun.
