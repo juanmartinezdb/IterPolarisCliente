@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./../../css/output.css" />
+  </head>
+
+  <body>
+    <h2 class="bg-lime-600 text-[yellow]">Bla bla</h2>
+    <h2 class="text-azul-claro bg-azul-oscuro">midnight</h2>
+    <h2>patata</h2>
+    <button
+      class="bg-azul-claro text-white hover:bg-azul-oscuro p-2 rounded-lg w-24 mx-auto block my-8"
+    >
+      Patata
+    </button>
+    <div
+      class="bg-gradient-to-l bg-azul-claro from-azul-oscuro border-red-500 border-2"
+    >
+      coso
+    </div>
+
+    <div class="text-4xl font-extrabold">
+      <span
+        class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500"
+      >
+        Hello World
+      </span>
+    </div>
+
+    <div class="w-[103px] mx-auto block bg-red-400">medidas en TAILWIND</div>
+    <!-- h-screen : TODA LA VISTA DISPONIBLE
+        h-full : 100% del contenedor  -->
+    <div>xw</div>
+    <div class="bg-blue-400 p-8">
+      <form action="" class="bg-white mx-auto mt-8 rounded-lg p-6">
+        <input
+          type="text"
+          class="border border-gray-300 w-full px-3 py-2 mb-4 rounded-md disabled:bg-red-400"
+          placeholder="Nombre"
+          disabled
+        />
+        <input
+          type="email"
+          class="border border-gray-300 w-full px-3 py-2 mb-4 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-600 invalid:focus:ring-red-600 peer"
+          placeholder="Correo"
+        />
+        <p class="text-red-400 hidden peer-invalid:block">
+          El correo es incorrecto
+        </p>
+        <input
+          type="password"
+          class="border border-gray-300 w-full px-3 py-2 mb-4 rounded-md"
+          placeholder="Constraseña"
+        />
+        <input
+          type="submit"
+          class="bg-blue-500 w-full py-2 text-white cursor-pointer hover:bg-blue-400"
+          value="Ingresar"
+        />
+      </form>
+    </div>
+
+    <div class="p-4">
+      <button
+        class="bg-orange-600 w-32 p-3 rounded-md relative after:content-[''] after:absolute after:left-32 after:border-8 after:border-transparent after:top-4 after:border-l-orange-600"
+      >
+        Haz click aquí
+      </button>
+      <input
+        class="border ml-2 px-2 placeholder:text-orange-600 placeholder:italic"
+        type="text"
+        placeholder="nombre"
+      />
+      <br /><br />
+      <input
+        class="file:bg-violet-100 file:border-0 file:rounded-lg file:text-violet-700 file:font-semibold file:px-3 hover:file:bg-violet-300"
+        type="file"
+      />
+
+      <ul class="list-decimal ml-6 marker:text-red-500 marker:font-bold">
+        <li class="list-disc">ñaña</li>
+        <!--prevalece el estilo del hijo frente al del padre de la lista-->
+        <li>ñaña2</li>
+        <li>ñaña3</li>
+      </ul>
+    </div>
+    <br /><br />
+    <p class="selection:bg-green-500 selection:text-white">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis enim
+      incidunt repudiandae consectetur eum accusantium itaque eos similique
+      voluptas laborum quas quasi amet reiciendis, quaerat et asperiores iusto
+      facere natus eius corrupti ratione minima rem. Omni s eum ex deserunt
+      numquam earum odit sequi in blanditiis cumque beatae, modi.
+    </p>
+    <br /><br />
+    <p
+      class="first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:mr-3 first-letter:float-left"
+    >
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis enim
+      incidunt repudiandae consectetur eum accusantium itaque eos similique
+      voluptas laborum quas quasi amet reiciendis, quaerat et asperiores iusto
+      facere natus eius corrupti ratione minima rem. Omni s eum ex deserunt
+      numquam earum odit sequi in blanditiis cumque beatae, modi.
+    </p>
+    <br /><br />
+    <div class="sm:bg-amber-200 md:bg-blue-200 lg:bg-pink-300">
+      <div class="border-2 border-black p-6 w-80 mx-auto mt-10 lg:w-96">
+        <h2 class="text-xl font-bold sm:text-2xl lg:text-3xl">Patata</h2>
+        <p class="mt-4 md:text-2xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fugit
+          sapiente placeat repudiandae consequatur suscipit facere sit odio
+          doloribus? Aliquid.
+        </p>
+      </div>
+    </div>
+    <!-- FLEX -->
+    <div
+      class="flex items-center place-content-between border-2 border-blue-800 h-[600px]"
+    >
+      <!--Podemos hacer clases personalizadas en el input! esto nos sirve
+             para tener el codigo limpio y tambien para esconderlo y preservarlo-->
+      <div class="card self-start">Patata1</div>
+      <div class="card">Patata2</div>
+      <div class="card grow self-end">Pataton</div>
+    </div>
+
+    <!-- GRID -->
+
+    <div class="grid grid-cols-4 gap-4">
+      <div class="card2 col-span-2">1</div>
+      <div class="card2">2</div>
+      <div class="card2">3</div>
+      <div class="card2 row-span-3">4</div>
+      <div class="card2">5</div>
+      <div class="card2">6</div>
+      <div class="card2 col-start-2 col-end-4">7</div>
+      <div class="card2 col-[2/5]">8</div>
+      <div class="card2">9</div>
+    </div>
+<br><br><br>
+    <div class="grid grid-cols-2 container mx-auto">
+        <div class="card2 col-span-2">Header</div>
+        <div class="card2 col-span-2">nav</div>
+        <div class="card2 ">section</div>
+        <div class="card2">article</div>
+        <div class="card2 row-[3/5] col-start-2">aside</div>
+        <div class="card2 col-span-2">footer</div>
+    </div>
+
+
+    <!-- MODO OSCURO -->
+     <label for="oscuro">Modo Oscuro</label>
+     <input class="" type="checkbox" id="oscuro">
+     <div class="dark:bg-slate-900 dark:text-white">
+Pataton
+     </div>
+  </body>
+  <script>
+    const activarDarkMode = document.querySelector("#oscuro");
+    //document.documentElement es directamente el html
+    activarDarkMode.addEventListener('click', ()=> document.documentElement.classList.toggle('dark'));
+  </script>
+</html>
