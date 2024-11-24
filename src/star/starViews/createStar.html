@@ -48,60 +48,29 @@
 </head>
 
 <body>
-    <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg bg-light shadow-sm">
-        <div class="container-fluid d-flex justify-content-start">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="../../../assets/logo.jpg" alt="logo" style="height: 40px;">
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="#">
-                            <img class="d-none d-md-block logo" src="../../../assets/logo.jpg" alt="logo">
-                            <p class="d-block d-md-none">Iter Polaris</p>
-                        </a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="constellationsDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">Constelaciones</a>
-                        <ul class="dropdown-menu" aria-labelledby="constellationsDropdown">
-                            <li><a class="dropdown-item" href="#">Constelaciones Actuales</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Crear Constelación</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="starsDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">Estrellas</a>
-                        <ul class="dropdown-menu" aria-labelledby="starsDropdown">
-                            <li><a class="dropdown-item" href="#">Listado de Estrellas</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Crear Estrella</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Buscar proyecto" aria-label="Search">
-                <button class="btn btn-outline-primary" type="submit"><i class="bi bi-search"></i></button>
-                <button class="btn btn-outline-info" type="filter"><i class="bi bi-funnel"></i></i></button>
-            </form>
-        </div>
-    </nav>
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg bg-light shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../../constellation/ConstellationViews/listConstellations.html">
+        <img src="../../../assets/logo.jpg" alt="logo" class="img-fluid" style="height: 40px;">
+      </a>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Buscar proyecto" aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
 
     <div class="d-flex row">
-        <div class="container-fluid col-md-3 py-2">
+        <div class="container-fluid col-lg-2 col-md-3 py-2">
             <!-- BOTON MOVIL -->
             <div class="d-md-none">
                 <button class="btn btn-primary  container-fluid rounded-0" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#sidebarMenu" aria-expanded="false" aria-controls="sidebarMenu">
+                    data-bs-target="#sidebarMenu"aria-controls="sidebarMenu">
                     Constelacion X
                 </button>
-                <img class="d-none d-md-block logo" src="../../../assets/logo.jpg" alt="logo">
+                <img class="d-none d-md-block logo rounded-circle" src="../../../assets/logo.jpg" alt="logo">
             </div>
 
             <!-- BARRA LATERAL -->
@@ -110,19 +79,19 @@
                     <div class="d-flex align-items-end py-2">
                         <h5 class="me-2">Constelacion X</h5>
                         <!--Volverlo clickable para hacer un return a Constelacion con todas las estrellas-->
-                        <img class="d-none d-md-block logo" src="../../../assets/logo.jpg" alt="logo">
+                        <img class="d-none d-md-block logo rounded-circle" src="../../../assets/logo.jpg" alt="logo">
                     </div>
                     <div class="accordion  text-end" id="galaxiesAccordion">
                         <!-- HABITOS 1 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingGalaxy1">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseGalaxy1" aria-expanded="true"
+                                    data-bs-target="#collapseGalaxy1" 
                                     aria-controls="collapseGalaxy1">
                                     Habitos
                                 </button>
                             </h2>
-                            <div id="collapseGalaxy1" class="accordion-collapse collapse show"
+                            <div id="collapseGalaxy1" class="accordion-collapse collapse"
                                 aria-labelledby="headingGalaxy1" data-bs-parent="#galaxiesAccordion">
                                 <div class="accordion-body">
                                     <ul class="list-group list-group-flush">
@@ -137,7 +106,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingGalaxy2">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseGalaxy2" aria-expanded="false"
+                                    data-bs-target="#collapseGalaxy2"
                                     aria-controls="collapseGalaxy2">
                                     Tareas
                                 </button>
@@ -157,7 +126,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingGalaxy3">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseGalaxy3" aria-expanded="false"
+                                    data-bs-target="#collapseGalaxy3"
                                     aria-controls="collapseGalaxy3">
                                     Recursos
                                 </button>
@@ -180,7 +149,7 @@
         <div class="main-content p-4 col-md-9">
             <!-- Cabecera -->
             <div class="d-flex col-md-10 justify-content-between align-items-end mb-4">
-                <h2 class="m-0">Crear <span>Estrella</span></h2>
+                <h2 class="m-0">Crear <span>Estrella</span><i class="bi bi-stars"></i></h2>
                 <!-- Botones -->
                 <div>
                     <button type="submit" class="btn btn-success"><i class="bi bi-plus-lg"></i></button>
@@ -191,7 +160,7 @@
             </div>
             <!-- Formulario -->
             <form name="star">
-                <div class="row g-3">
+                <div class="row g-3 col-md-10">
 
                     <!-- Tipo -->
                     <div class="col-md-6">
@@ -247,61 +216,60 @@
                     </div>
                 </div>
                 <!-- DESPLEGABLE PARA SEGUN EL TIPO DE ESTRELLA SE RELLENE UNO U OTRO FORMULARIO -->
-                <!-- Habito  Frecuencia (radial), energia (number), puntos (number con steps) -->
-                <!-- frecuencia -->
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="frecuencia" checked>
-                    <label class="form-check-label" for="frecuencia">Diario/Semanal</label>
-                </div>
-                <!-- energia -->
-                <div class="col-8 col-md-4 my-3">
-                    <div class="input-group mb-3">
-                        <label for="starEnergy" class="form-label me-2">Energia</label>
-                        <span class="input-group-text"><i class="bi bi-battery-charging"></i></span>
-                        <span class="input-group-text"><i class="bi bi-battery-half"></i></span>
-                        <input type="number" class="form-control" id="starEnergy"  min="-10" max="10">
+                <div class="tipo col-md-10">
+                    <!-- Habito  Frecuencia (radial), energia (number), puntos (number con steps) -->
+                    <!-- frecuencia -->
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="frecuencia" checked>
+                        <label class="form-check-label" for="frecuencia">Diario/Semanal</label>
                     </div>
-                </div>
-                <!-- puntos -->
-                <div class="col-8 col-md-4 my-3">
-                    <div class="input-group mb-3">
-                        <label for="starPoints" class="form-label me-2">Puntos</label>
-                        <input type="number" class="form-control" id="starPoints" step="10"  min="10" max="10000">
-                            <span class="input-group-text"><i class="bi bi-trophy-fill"></i></span>
+                    <!-- energia -->
+                    <div class="col-10 col-md-5 my-3">
+                        <div class="input-group mb-3">
+                            <label for="starEnergy" class="form-label me-2">Energia</label>
+                            <span class="input-group-text"><i class="bi bi-battery-charging"></i></span>
+                            <span class="input-group-text"><i class="bi bi-battery-half"></i></span>
+                            <input type="number" class="form-control" id="starEnergy"  min="-10" max="10">
+                        </div>
                     </div>
-                </div>
-
-                <!-- Tarea prioridad, Fecha limite (date), energia (number), puntos (number con steps) -->
-                <div class="col-md-6 my-3">
-                    <div class="input-group mb-3">
-                        <label for="starDate" class="form-label me-2">Fecha Límite</label>
-                        <input type="date" class="form-control" id="starDate">
-                            <span class="input-group-text"><i class="bi bi-trophy-fill"></i></span>
+                    <!-- puntos -->
+                    <div class="col-10 col-md-5 my-3">
+                        <div class="input-group mb-3">
+                            <label for="starPoints" class="form-label me-2">Puntos</label>
+                            <input type="number" class="form-control" id="starPoints" step="10"  min="10" max="10000">
+                                <span class="input-group-text"><i class="bi bi-trophy-fill"></i></span>
+                        </div>
                     </div>
-                </div>
-
-                <!-- energia -->
-                <div class="col-8 col-md-4 my-3">
-                    <div class="input-group mb-3">
-                        <label for="starEnergy" class="form-label me-2">Energia</label>
-                        <span class="input-group-text"><i class="bi bi-battery-charging"></i></span>
-                        <span class="input-group-text"><i class="bi bi-battery-half"></i></span>
-                        <input type="number" class="form-control" id="starEnergy"  min="-10" max="10">
+                    <!-- Tarea prioridad, Fecha limite (date), energia (number), puntos (number con steps) -->
+                    <div class="col-md-7 my-3">
+                        <div class="input-group mb-3">
+                            <label for="starDate" class="form-label me-2">Fecha Límite</label>
+                            <input type="date" class="form-control" id="starDate">
+                                <span class="input-group-text"><i class="bi bi-trophy-fill"></i></span>
+                        </div>
                     </div>
-                </div>
-                <!-- puntos -->
-                <div class="col-8 col-md-4 my-3">
-                    <div class="input-group mb-3">
-                        <label for="starPoints" class="form-label me-2">Puntos</label>
-                        <input type="number" class="form-control" id="starPoints" step="10"  min="10" max="10000">
-                            <span class="input-group-text"><i class="bi bi-trophy-fill"></i></span>
+                    <!-- energia -->
+                    <div class="col-10 col-md-5 my-3">
+                        <div class="input-group mb-3">
+                            <label for="starEnergy" class="form-label me-2">Energia</label>
+                            <span class="input-group-text"><i class="bi bi-battery-charging"></i></span>
+                            <span class="input-group-text"><i class="bi bi-battery-half"></i></span>
+                            <input type="number" class="form-control" id="starEnergy"  min="-10" max="10">
+                        </div>
                     </div>
+                    <!-- puntos -->
+                    <div class="col-9 col-md-5 my-3">
+                        <div class="input-group mb-3">
+                            <label for="starPoints" class="form-label me-2">Puntos</label>
+                            <input type="number" class="form-control" id="starPoints" step="10"  min="10" max="10000">
+                                <span class="input-group-text"><i class="bi bi-trophy-fill"></i></span>
+                        </div>
+                    </div>
+                    <!-- Recurso registrar fecha today (hidden), enlace (text)-->
+                    <label for="starLink" class="form-label">Enlace</label>
+                    <input type="text" class="form-control" id="starLink" placeholder="URL"
+                        required>
                 </div>
-
-                <!-- Recurso registrar fecha today (hidden), enlace (text)-->
-                <label for="starLink" class="form-label">Enlace</label>
-                <input type="text" class="form-control" id="starLink" placeholder="URL"
-                    required>
 
                 <!-- Descripción -->
                 <div class="col-md-10">

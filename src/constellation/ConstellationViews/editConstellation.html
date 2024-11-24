@@ -45,28 +45,9 @@
   <!-- Barra de navegación -->
   <nav class="navbar navbar-expand-lg bg-light shadow-sm">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="../../constellation/ConstellationViews/listConstellations.html">
         <img src="../../../assets/logo.jpg" alt="logo" class="img-fluid" style="height: 40px;">
       </a>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="#">Iter Polaris</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="constellationsDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">Constelaciones</a>
-            <ul class="dropdown-menu" aria-labelledby="constellationsDropdown">
-              <li><a class="dropdown-item" href="../../constellation/ConstellationViews/listConstellations.html">Constelaciones Actuales</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="../../constellation/ConstellationViews/createCostellation.html">Crear Constelación</a></li>
-            </ul>
-          </li>
-        </ul>
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Buscar proyecto" aria-label="Search">
           <button class="btn btn-outline-primary" type="submit"><i class="bi bi-search"></i></button>
@@ -74,11 +55,90 @@
       </div>
     </div>
   </nav>
+  <!-- PRINCIPAL DE CADA PAGINA -->
+  <div class="d-flex row">
+    <!-- Menú lateral -->
+    <div class="container-fluid col-md-3 col-lg-2 py-2">
+        <!-- BOTON MOVIL -->
+        <div class="d-flex">
+          <button class="btn btn-primary d-md-none container-fluid rounded-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu" aria-expanded="false" aria-controls="sidebarMenu">
+            Constelaciones
+          </button>
+        </div>
+        <!-- BARRA LATERAL CONSTELACIONES -->
+        <div class="collapse d-md-block" id="sidebarMenu">
+          <div class="sidebar bg-light">
+            <div class="d-flex justify-content-between align-items-end">
+              <h5 class="text-center">Constelaciones</h5>
+              <form action="../../constellation/ConstellationViews/createCostellation.html" method="get"><button type="submit" class="btn btn-success m-2 createConstellation"><i class="bi bi-plus-lg"></i></button></form>
+            </div>
+            <div class="accordion" id="galaxiesAccordion">
+              <!-- Galaxia 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingGalaxy1">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseGalaxy1" aria-controls="collapseGalaxy1">
+                    Galaxia 1
+                  </button>                
+                </h2>
+                <div id="collapseGalaxy1" class="accordion-collapse collapse" aria-labelledby="headingGalaxy1"
+                  data-bs-parent="#galaxiesAccordion">
+                  <div class="accordion-body">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item list-group-item-action">Constelación 1A</li>
+                      <li class="list-group-item list-group-item-action">Constelación 1B</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Galaxia 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingGalaxy2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseGalaxy2" aria-controls="collapseGalaxy2">
+                    Galaxia 2
+                  </button>
+                </h2>
+                <div id="collapseGalaxy2" class="accordion-collapse collapse" aria-labelledby="headingGalaxy2"
+                  data-bs-parent="#galaxiesAccordion">
+                  <div class="accordion-body">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item list-group-item-action">Constelación 2A</li>
+                      <li class="list-group-item list-group-item-action">Constelación 2B</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Galaxia 3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingGalaxy3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseGalaxy3" aria-controls="collapseGalaxy3">
+                    Galaxia 3
+                  </button>
+                </h2>
+                <div id="collapseGalaxy3" class="accordion-collapse collapse" aria-labelledby="headingGalaxy3"
+                  data-bs-parent="#galaxiesAccordion">
+                  <div class="accordion-body">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item list-group-item-action">Constelación 3A</li>
+                      <li class="list-group-item list-group-item-action">Constelación 3B</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
         <!-- Contenido principal EDITAR -->
         <div class="main-content p-4 col-md-9">
             <!-- Cabecera -->
             <div class="d-flex col-md-10 justify-content-between align-items-end mb-4">
-                <h2 class="m-0">Editar <span>Constelación</span> <img class="logo my-2" src="../../../assets/logo.jpg" alt="Imagen proyecto"></h2>
+                <h2 class="m-0">Editar <span>Constelación</span> <img class="logo my-2 rounded-circle" src="../../../assets/logo.jpg" alt="Imagen proyecto"></h2>
                 <!-- Botones -->
                 <div>
                     <button type="button" class="btn btn-warning"><i class="bi bi-pencil-fill"></i></button>
