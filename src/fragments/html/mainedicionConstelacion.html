@@ -1,0 +1,60 @@
+        <!-- Contenido principal EDITAR -->
+        <div class="main-content p-4 col-md-9">
+            <!-- Cabecera -->
+            <div class="d-flex col-md-10 justify-content-between align-items-end mb-4">
+                <h2 class="m-0">Editar <span>Constelación</span> <img class="logo my-2" src="../../../assets/logo.jpg" alt="Imagen proyecto"></h2>
+                <!-- Botones -->
+                <div>
+                    <button type="submit" class="btn btn-warning"><i class="bi bi-pencil-fill"></i></button>
+                    <button type="reset" class="btn btn-info "><i class="bi bi-arrow-repeat"></i></button>
+                    <button type="button" class="btn btn-danger"><a  class="text-white" href="#"><i class="bi bi-x-lg"></i></a></button>
+                </div>
+            </div>
+            <!-- Formulario -->
+            <form name="constellation">
+                <div class="row g-3">
+                    <!-- Nombre -->
+                    <div class="col-md-6">
+                        <label for="constellationName" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="constellationName"
+                            placeholder="Nombre de la Constelación" required>
+
+                        <!-- Estatus -->
+                        <div class=" d-flex align-items-center">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="constellationStatus" checked>
+                                <label for="constellationStatus" class="form-check-label ms-2">Activa</label>
+                            </div>
+                        </div>
+                        <!-- Galaxia -->
+                        <div class="col-lg-8">
+                            <label for="galaxySelect" class="form-label">Galaxia</label>
+                            <select class="form-select" id="galaxySelect" required>
+                                <option value="" disabled selected>Selecciona una galaxia...</option>
+                                <option value="1">Galaxia 1</option>
+                                <option value="2">Galaxia 2</option>
+                                <option value="3">Galaxia 3</option>
+                            </select>
+                        </div>
+                        <!-- Imagen AJUSTAR LUEGO QUE SE VEA ARRIBA EN LA PARTE DEL SPAN NOMBRE Y UN TAMAÑO CHIQUITO -->
+                        <div class="col-lg-8">
+                            <label for="constellationImage" class="form-label">Imagen</label>
+                            <input type="file" class="form-control" id="constellationImage" accept="image/*">
+                        </div>
+                    </div>
+                    <!-- mapa -->
+                    <div class="col-md-4">
+                        <label class="form-label">Ubicación</label>
+                        <div id="map">HUECO PARA EL MAPA</div>
+                    </div>
+                </div>
+
+                <!-- Descripción -->
+                <div class="col-md-10">
+                    <label for="constellationDescription" class="form-label">Descripción</label>
+                    <textarea class="form-control" id="constellationDescription" rows="6"
+                        placeholder="Describe el proyecto"></textarea>
+                </div>
+
+            </form>
+        </div>

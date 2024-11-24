@@ -1,0 +1,23 @@
+.logo {
+    height: 40px;
+    ;
+}
+
+/* barra lateral */
+
+.sidebar {
+    width: 100%;
+}
+
+.accordion-body {
+    padding: 0;
+}
+
+#map {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}

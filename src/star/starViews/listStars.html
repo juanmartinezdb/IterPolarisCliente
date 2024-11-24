@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- HUECO PARA LOS SCRIPTS -->
+  <!--  -->
+  <!-- Generico de bootstrap y css -->
+  <link rel="stylesheet" href="../../../css/main.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- mapas -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!--  -->
+  <!-- CSS -->
+  <style>
+    .logo {
+      height: 40px;
+      ;
+    }
+
+    /* barra lateral */
+
+    .sidebar {
+      width: 100%;
+    }
+
+    .accordion-body {
+      padding: 0;
+    }
+
+    #map {
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg bg-light shadow-sm">
+    <div class="container-fluid d-flex justify-content-start">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="../../../assets/logo.jpg" alt="logo" style="height: 40px;">
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">
+              <img class="d-none d-md-block logo" src="../../../assets/logo.jpg" alt="logo">
+              <p class="d-block d-md-none">Iter Polaris</p>
+            </a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="constellationsDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Constelaciones</a>
+            <ul class="dropdown-menu" aria-labelledby="constellationsDropdown">
+              <li><a class="dropdown-item" href="#">Constelaciones Actuales</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Crear Constelación</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="starsDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Estrellas</a>
+            <ul class="dropdown-menu" aria-labelledby="starsDropdown">
+              <li><a class="dropdown-item" href="#">Listado de Estrellas</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Crear Estrella</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Buscar proyecto" aria-label="Search">
+        <button class="btn btn-outline-primary" type="submit"><i class="bi bi-search"></i></button>
+        <button class="btn btn-outline-info" type="filter"><i class="bi bi-funnel"></i></i></button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="d-flex row">
+    <div class="container-fluid col-md-3 py-2">
+      <!-- BOTON MOVIL -->
+      <div class="d-md-none">
+        <button class="btn btn-primary  container-fluid rounded-0" type="button" data-bs-toggle="collapse"
+          data-bs-target="#sidebarMenu" aria-expanded="false" aria-controls="sidebarMenu">
+          Constelacion X
+        </button>
+        <img class="d-none d-md-block logo" src="../../../assets/logo.jpg" alt="logo">
+      </div>
+
+      <!-- BARRA LATERAL -->
+      <div class="collapse d-md-block" id="sidebarMenu">
+        <div class="sidebar bg-light">
+          <div class="d-flex align-items-end py-2">
+            <h5 class="me-2">Constelacion X</h5> <!--Volverlo clickable para hacer un return a Constelacion con todas las estrellas-->
+            <img class="d-none d-md-block logo" src="../../../assets/logo.jpg" alt="logo">
+          </div>
+          <div class="accordion  text-end" id="galaxiesAccordion">
+            <!-- HABITOS 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingGalaxy1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseGalaxy1" aria-expanded="true" aria-controls="collapseGalaxy1">
+                  Habitos
+                </button>
+              </h2>
+              <div id="collapseGalaxy1" class="accordion-collapse collapse show" aria-labelledby="headingGalaxy1"
+                data-bs-parent="#galaxiesAccordion">
+                <div class="accordion-body">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item list-group-item-action">Habito 1</li>
+                    <li class="list-group-item list-group-item-action">habito 2</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tareas -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingGalaxy2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseGalaxy2" aria-expanded="false" aria-controls="collapseGalaxy2">
+                  Tareas
+                </button>
+              </h2>
+              <div id="collapseGalaxy2" class="accordion-collapse collapse" aria-labelledby="headingGalaxy2"
+                data-bs-parent="#galaxiesAccordion">
+                <div class="accordion-body">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item list-group-item-action">Tarea 1</li>
+                    <li class="list-group-item list-group-item-action">Tarea 2</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recursos -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingGalaxy3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseGalaxy3" aria-expanded="false" aria-controls="collapseGalaxy3">
+                  Recursos
+                </button>
+              </h2>
+              <div id="collapseGalaxy3" class="accordion-collapse collapse" aria-labelledby="headingGalaxy3"
+                data-bs-parent="#galaxiesAccordion">
+                <div class="accordion-body">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item list-group-item-action">Recursos 1</li>
+                    <li class="list-group-item list-group-item-action">Recursos 2</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-content col-md-9 p-4">
+      <!--CASO: HABITO -->
+      <!-- Cabecera -->
+      <div class="d-flex col-md-10 justify-content-between align-items-end mb-4">
+        <h2 class="me-2"><span><i class="bi bi-check2-circle"></i></span> Habito X</h2>
+        <div>
+          <button class="btn btn-warning"><i class="bi bi-pencil-fill"></i></button>
+          <button class="btn btn-danger"><a class="text-white" href="#"><i class="bi bi-x-lg"></i></a></button>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="d-flex align-items-end">
+          <h4>Constelacion</h4>
+          <img class=" logo mx-2 rounded-circle" src="../../../assets/logo.jpg" alt="logo">
+          <!--ACTUALIZAR EL RESTO DE IMAGENES DE CONSTELLACION CON EL rounded-circle>-->
+          <h5>Galaxia</h5>
+        </div>
+        <p><b>Status:</b> Activa</p>
+        <p><b>Frecuencia:</b> Diario (icono/color)</p>
+        <p><b>Energia</b> +3 <i class="bi bi-battery-charging"></i> // -2 <i class="bi bi-battery-half"></i></p>
+        <p> <b>Puntos:</b> 10 <i class="bi bi-trophy-fill"></i></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et expedita sint debitis labore ipsa accusantium.
+        </p>
+      </div>
+      <!--CASO: Tarea -->
+      <!-- Cabecera -->
+      <div class="d-flex col-md-10 justify-content-between align-items-end mb-4">
+        <h2 class="me-2"><span><i class="bi bi-calendar2-heart"></i></span> Tarea X</h2>
+        <div>
+          <button class="btn btn-warning"><i class="bi bi-pencil-fill"></i></button>
+          <button class="btn btn-danger"><a class="text-white" href="#"><i class="bi bi-x-lg"></i></a></button>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="d-flex align-items-end">
+          <h4>Constelacion</h4>
+          <img class="logo mx-2 rounded-circle" src="../../../assets/logo.jpg" alt="logo">
+          <!--ACTUALIZAR EL RESTO DE IMAGENES DE CONSTELLACION CON EL rounded-circle>-->
+          <h5>Galaxia</h5>
+        </div>
+        <p><b>Status:</b> Activa</p>
+        <p><b>Prioridad</b> Media</p>
+        <p><b>Fecha limite:</b> Date <i class="bi bi-clock"></i></p>
+        <p><b>Energia</b> +3 <i class="bi bi-battery-charging"></i> // -2 <i class="bi bi-battery-half"></i></p>
+        <p> <b>Puntos:</b> 10 <i class="bi bi-trophy-fill"></i></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et expedita sint debitis labore ipsa accusantium.
+        </p>
+      </div>
+
+      <!--CASO: Recurso -->
+      <!-- Cabecera -->
+      <div class="d-flex col-md-10 justify-content-between align-items-end mb-4">
+        <h2 class="me-2"><span><i class="bi bi-rocket-fill"></i></i></span> Recurso X</h2>
+        <div>
+          <button class="btn btn-warning"><i class="bi bi-pencil-fill"></i></button>
+          <button class="btn btn-danger"><a class="text-white" href="#"><i class="bi bi-x-lg"></i></a></button>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="d-flex align-items-end">
+          <h4>Constelacion</h4>
+          <img class="logo mx-2 rounded-circle" src="../../../assets/logo.jpg" alt="logo">
+          <!--ACTUALIZAR EL RESTO DE IMAGENES DE CONSTELLACION CON EL rounded-circle>-->
+          <h5>Galaxia</h5>
+        </div>
+        <p><b>Status:</b> Activa</p>
+        <p><b>Agregado:</b> Date <i class="bi bi-calendar2-plus"></i></p>
+        <div class="d-flex">
+          <p class="me-1"><b>Enlace: </b></p>
+          <a href="">Link</a>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et expedita sint debitis labore ipsa accusantium.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+    function selectConstellation(name) {
+      document.querySelectorAll('.list-group-item').forEach(el => el.classList.remove('active'));
+      const selected = Array.from(document.querySelectorAll('.list-group-item')).find(el => el.textContent === name);
+      selected.classList.add('active');
+      document.querySelector('.main-content h2').textContent = name;
+    }
+
+    // MOSTRAR MAPA -----------------------(coordenada original el instituto)
+    // Crear el mapa centrado en las coordenadas iniciales
+    const initialCoordinates = [36.6957750088756, 355.54315547233134]; // Tus coordenadas originales
+    const map = L.map('map').setView(initialCoordinates, 20);
+
+    // Añadir capa de OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors',
+    }).addTo(map);
+
+    // Agregar marcador inicial
+    let marker = L.marker(initialCoordinates, { draggable: true }).addTo(map)
+      .bindPopup('Haz clic para moverme a otra ubicación')
+      .openPopup();
+
+
+
+
+  </script>
+</body>
+
+</html>
