@@ -228,13 +228,16 @@
 
 
   <script>
-    function selectConstellation(name) {
-      document.querySelectorAll('.list-group-item').forEach(el => el.classList.remove('active'));
-      const selected = Array.from(document.querySelectorAll('.list-group-item')).find(el => el.textContent === name);
-      selected.classList.add('active');
-      document.querySelector('.main-content h2').textContent = name;
-    }
+        // MARCAR LOS ITEMS DEL LATERAL ACTIVOS/DESACTIVADOS (AÑADIR FUNCIONALIDAD PARA CREAR EL READ)
 
+        const listaItems = document.querySelectorAll('.list-group-item');
+
+listaItems.forEach(star => {
+    star.addEventListener('click', () => {
+        listaItems.forEach(i => i.classList.remove('active'));
+        star.classList.add('active');
+    });
+});
     // MOSTRAR MAPA -----------------------(coordenada original el instituto)
     // Crear el mapa centrado en las coordenadas iniciales
     const initialCoordinates = [36.6957750088756, 355.54315547233134]; // Tus coordenadas originales

@@ -198,9 +198,16 @@
     </div>
 
     <script>
-        //BARRA LATERAL METER LISTENERS DE NAVEGACION A  Constelaciones
+        // MARCAR LOS ITEMS DEL LATERAL ACTIVOS/DESACTIVADOS (AÑADIR FUNCIONALIDAD PARA CREAR EL READ)
 
+        const listaItems = document.querySelectorAll('.list-group-item');
 
+listaItems.forEach(star => {
+    star.addEventListener('click', () => {
+        listaItems.forEach(i => i.classList.remove('active'));
+        star.classList.add('active');
+    });
+});
 
         // mapa
         // Crear el mapa centrado en las coordenadas iniciales

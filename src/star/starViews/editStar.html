@@ -210,7 +210,7 @@
                         </div>
                     </div>
                     <!-- mapa -->
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <label class="form-label">Ubicación</label>
                         <div id="map">HUECO PARA EL MAPA</div>
                     </div>
@@ -241,11 +241,10 @@
                                     </div>
                                 </div>
                                 <!-- Tarea prioridad, Fecha limite (date), energia (number), puntos (number con steps) -->
-                                <div class="col-md-7 my-3">
+                                <div class="col-md-5 my-3">
                                     <div class="input-group mb-3">
                                         <label for="starDate" class="form-label me-2">Fecha Límite</label>
                                         <input type="date" class="form-control" id="starDate">
-                                            <span class="input-group-text"><i class="bi bi-trophy-fill"></i></span>
                                     </div>
                                 </div>
                                 <!-- energia -->
@@ -283,13 +282,17 @@
 
 
     <script>
-        function selectConstellation(name) {
-            document.querySelectorAll('.list-group-item').forEach(el => el.classList.remove('active'));
-            const selected = Array.from(document.querySelectorAll('.list-group-item')).find(el => el.textContent === name);
-            selected.classList.add('active');
-            document.querySelector('.main-content h2').textContent = name;
-        }
+        // MARCAR LOS ITEMS DEL LATERAL ACTIVOS/DESACTIVADOS (AÑADIR FUNCIONALIDAD PARA CREAR EL READ)
 
+    const listaItems = document.querySelectorAll('.list-group-item');
+
+    listaItems.forEach(star => {
+        star.addEventListener('click', () => {
+            listaItems.forEach(i => i.classList.remove('active'));
+            star.classList.add('active');
+        });
+    });
+// ---------------------------------------------------------------------------------
         // MOSTRAR MAPA -----------------------(coordenada original el instituto)
         // Crear el mapa centrado en las coordenadas iniciales
         const initialCoordinates = [36.6957750088756, 355.54315547233134]; // Tus coordenadas originales

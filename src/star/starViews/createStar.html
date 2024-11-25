@@ -215,62 +215,60 @@
                         <div id="map">HUECO PARA EL MAPA</div>
                     </div>
                 </div>
-                <!-- DESPLEGABLE PARA SEGUN EL TIPO DE ESTRELLA SE RELLENE UNO U OTRO FORMULARIO -->
-                <div class="tipo col-md-10">
-                    <!-- Habito  Frecuencia (radial), energia (number), puntos (number con steps) -->
-                    <!-- frecuencia -->
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="frecuencia" checked>
-                        <label class="form-check-label" for="frecuencia">Diario/Semanal</label>
-                    </div>
-                    <!-- energia -->
-                    <div class="col-10 col-md-5 my-3">
-                        <div class="input-group mb-3">
-                            <label for="starEnergy" class="form-label me-2">Energia</label>
-                            <span class="input-group-text"><i class="bi bi-battery-charging"></i></span>
-                            <span class="input-group-text"><i class="bi bi-battery-half"></i></span>
-                            <input type="number" class="form-control" id="starEnergy"  min="-10" max="10">
+                          <!-- DESPLEGABLE PARA SEGUN EL TIPO DE ESTRELLA SE RELLENE UNO U OTRO FORMULARIO -->
+                          <div class="tipo col-md-10">
+                            <!-- Habito  Frecuencia (radial), energia (number), puntos (number con steps) -->
+                            <!-- frecuencia -->
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="frecuencia" checked>
+                                <label class="form-check-label" for="frecuencia">Diario/Semanal</label>
+                            </div>
+                            <!-- energia -->
+                            <div class="col-10 col-md-5 my-3">
+                                <div class="input-group mb-3">
+                                    <label for="starEnergy" class="form-label me-2">Energia</label>
+                                    <span class="input-group-text"><i class="bi bi-battery-charging"></i></span>
+                                    <span class="input-group-text"><i class="bi bi-battery-half"></i></span>
+                                    <input type="number" class="form-control" id="starEnergy"  min="-10" max="10">
+                                </div>
+                            </div>
+                            <!-- puntos -->
+                            <div class="col-10 col-md-5 my-3">
+                                <div class="input-group mb-3">
+                                    <label for="starPoints" class="form-label me-2">Puntos</label>
+                                    <input type="number" class="form-control" id="starPoints" step="10"  min="10" max="10000">
+                                        <span class="input-group-text"><i class="bi bi-trophy-fill"></i></span>
+                                </div>
+                            </div>
+                            <!-- Tarea prioridad, Fecha limite (date), energia (number), puntos (number con steps) -->
+                            <div class="col-10 col-md-5 my-3">
+                                <div class="input-group mb-3">
+                                    <label for="starDate" class="form-label me-2">Fecha Límite</label>
+                                    <input type="date" class="form-control" id="starDate">
+                                </div>
+                            </div>
+                            <!-- energia -->
+                            <div class="col-10 col-md-5 my-3">
+                                <div class="input-group mb-3">
+                                    <label for="starEnergy" class="form-label me-2">Energia</label>
+                                    <span class="input-group-text"><i class="bi bi-battery-charging"></i></span>
+                                    <span class="input-group-text"><i class="bi bi-battery-half"></i></span>
+                                    <input type="number" class="form-control" id="starEnergy"  min="-10" max="10">
+                                </div>
+                            </div>
+                            <!-- puntos -->
+                            <div class="col-10 col-md-5 my-3">
+                                <div class="input-group mb-3">
+                                    <label for="starPoints" class="form-label me-2">Puntos</label>
+                                    <input type="number" class="form-control" id="starPoints" step="10"  min="10" max="10000">
+                                        <span class="input-group-text"><i class="bi bi-trophy-fill"></i></span>
+                                </div>
+                            </div>
+                            <!-- Recurso registrar fecha today (hidden), enlace (text)-->
+                            <label for="starLink" class="form-label">Enlace</label>
+                            <input type="text" class="form-control" id="starLink" placeholder="URL"
+                                required>
                         </div>
-                    </div>
-                    <!-- puntos -->
-                    <div class="col-10 col-md-5 my-3">
-                        <div class="input-group mb-3">
-                            <label for="starPoints" class="form-label me-2">Puntos</label>
-                            <input type="number" class="form-control" id="starPoints" step="10"  min="10" max="10000">
-                                <span class="input-group-text"><i class="bi bi-trophy-fill"></i></span>
-                        </div>
-                    </div>
-                    <!-- Tarea prioridad, Fecha limite (date), energia (number), puntos (number con steps) -->
-                    <div class="col-md-7 my-3">
-                        <div class="input-group mb-3">
-                            <label for="starDate" class="form-label me-2">Fecha Límite</label>
-                            <input type="date" class="form-control" id="starDate">
-                                <span class="input-group-text"><i class="bi bi-trophy-fill"></i></span>
-                        </div>
-                    </div>
-                    <!-- energia -->
-                    <div class="col-10 col-md-5 my-3">
-                        <div class="input-group mb-3">
-                            <label for="starEnergy" class="form-label me-2">Energia</label>
-                            <span class="input-group-text"><i class="bi bi-battery-charging"></i></span>
-                            <span class="input-group-text"><i class="bi bi-battery-half"></i></span>
-                            <input type="number" class="form-control" id="starEnergy"  min="-10" max="10">
-                        </div>
-                    </div>
-                    <!-- puntos -->
-                    <div class="col-9 col-md-5 my-3">
-                        <div class="input-group mb-3">
-                            <label for="starPoints" class="form-label me-2">Puntos</label>
-                            <input type="number" class="form-control" id="starPoints" step="10"  min="10" max="10000">
-                                <span class="input-group-text"><i class="bi bi-trophy-fill"></i></span>
-                        </div>
-                    </div>
-                    <!-- Recurso registrar fecha today (hidden), enlace (text)-->
-                    <label for="starLink" class="form-label">Enlace</label>
-                    <input type="text" class="form-control" id="starLink" placeholder="URL"
-                        required>
-                </div>
-
                 <!-- Descripción -->
                 <div class="col-md-10">
                     <label for="starDescription" class="form-label">Descripción</label>
@@ -284,13 +282,16 @@
 
 
     <script>
-        function selectConstellation(name) {
-            document.querySelectorAll('.list-group-item').forEach(el => el.classList.remove('active'));
-            const selected = Array.from(document.querySelectorAll('.list-group-item')).find(el => el.textContent === name);
-            selected.classList.add('active');
-            document.querySelector('.main-content h2').textContent = name;
-        }
+        // MARCAR LOS ITEMS DEL LATERAL ACTIVOS/DESACTIVADOS (AÑADIR FUNCIONALIDAD PARA CREAR EL READ)
 
+        const listaItems = document.querySelectorAll('.list-group-item');
+
+listaItems.forEach(star => {
+    star.addEventListener('click', () => {
+        listaItems.forEach(i => i.classList.remove('active'));
+        star.classList.add('active');
+    });
+});
         // MOSTRAR MAPA -----------------------(coordenada original el instituto)
         // Crear el mapa centrado en las coordenadas iniciales
         const initialCoordinates = [36.6957750088756, 355.54315547233134]; 
