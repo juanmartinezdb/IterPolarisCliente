@@ -1,0 +1,86 @@
+<!-- BOTON MOVIL -->
+<div class="d-flex">
+    <button class="btn btn-primary d-md-none container-fluid rounded-0" type="button" data-bs-toggle="collapse"
+        data-bs-target="#sidebarMenu" aria-expanded="false" aria-controls="sidebarMenu">
+        Constelaciones
+    </button>
+</div>
+<!-- BARRA LATERAL CONSTELACIONES -->
+<div class="collapse d-md-block" id="sidebarMenu">
+    <div class="sidebar bg-light">
+        <div class="d-flex justify-content-between align-items-end">
+            <h5 class="text-center">Constelaciones</h5>
+            <form action="../../constellation/ConstellationViews/createCostellation.html" method="get"><button
+                    type="submit" class="btn btn-success m-2 createConstellation"><i class="bi bi-plus-lg"></i></button>
+            </form>
+        </div>
+        <div class="accordion" id="galaxiesAccordion">
+            <!-- Galaxia Clase -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingGalaxy1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseGalaxy1" aria-controls="collapseGalaxy1">
+                        Clase
+                    </button>
+                </h2>
+                <div id="collapseGalaxy1" class="accordion-collapse collapse" aria-labelledby="headingGalaxy1"
+                    data-bs-parent="#galaxiesAccordion">
+                    <div class="accordion-body">
+                        <ul class="list-group list-group-flush Clase">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galaxia Trabajo -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingGalaxy2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseGalaxy2" aria-controls="collapseGalaxy2">
+                        Trabajo
+                    </button>
+                </h2>
+                <div id="collapseGalaxy2" class="accordion-collapse collapse" aria-labelledby="headingGalaxy2"
+                    data-bs-parent="#galaxiesAccordion">
+                    <div class="accordion-body">
+                        <ul class="list-group list-group-flush Trabajo">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Galaxia Salud -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingGalaxy3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseGalaxy3" aria-controls="collapseGalaxy3">
+                       Salud
+                    </button>
+                </h2>
+                <div id="collapseGalaxy3" class="accordion-collapse collapse" aria-labelledby="headingGalaxy3"
+                    data-bs-parent="#galaxiesAccordion">
+                    <div class="accordion-body">
+                        <ul class="list-group list-group-flush Salud">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galaxia Vida -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingGalaxy4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseGalaxy4" aria-controls="collapseGalaxy4">
+                        Vida
+                    </button>
+                </h2>
+                <div id="collapseGalaxy4" class="accordion-collapse collapse" aria-labelledby="headingGalaxy4"
+                    data-bs-parent="#galaxiesAccordion">
+                    <div class="accordion-body">
+                        <ul class="list-group list-group-flush Vida">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
