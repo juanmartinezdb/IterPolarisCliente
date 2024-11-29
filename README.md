@@ -17,22 +17,20 @@ ITERPOLARISCLIENTE/
 │
 ├── src/                   # Application source code
 │   ├── constellation/     # Constellations module
-│   │   ├── ConstellationViews/
-│   │   │   ├── constellation.css
-│   │   │   ├── createConstellation.html
-│   │   │   ├── editConstellation.html
-│   │   │   └── listConstellations.html
+│   │   ├── constellation.css
+│   │   ├── createConstellation.html
+│   │   ├── editConstellation.html
+│   │   └── listConstellations.html
 │   │   ├── constellation.js
 │   │   └── constellationController.js
 │   ├── index.html
 │   ├── main.js
 │   │
 │   ├── star/              # Stars module
-│   │   ├── starViews/
-│   │   │   ├── createStar.html
-│   │   │   ├── editStar.html
-│   │   │   ├── listStars.html
-│   │   │   └── star.css
+│   │   ├── createStar.html
+│   │   ├── editStar.html
+│   │   ├── listStars.html
+│   │   └── star.css
 │   │   ├── star.js
 │   │   └── starController.js
 │

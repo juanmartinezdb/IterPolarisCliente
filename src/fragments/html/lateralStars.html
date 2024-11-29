@@ -10,17 +10,19 @@
     <div class="sidebar bg-light">
         <div class="d-flex justify-content-between align-items-end">
             <h5 class="text-center constelacion"></h5>
-            <button
-                    type="submit" class="btn btn-success m-2 createStar"><i class="bi bi-plus-lg"></i></button>
-        </div>
+                </div>
         <div class="accordion" id="galaxiesAccordion">
             <!-- Habitos -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingGalaxy1">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseGalaxy1" aria-controls="collapseGalaxy1">
-                        Habitos
-                    </button>
+                    <div class="d-flex align-items-center justify-content-between w-100">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseGalaxy1" aria-controls="collapseGalaxy1">
+                            Habitos
+                        </button>
+                        <button
+                            type="button" data-t="1" class="btn btn-sm btn-success ms-2 createStar"><i class="bi bi-plus-lg"></i></button>
+                    </div>
                 </h2>
                 <div id="collapseGalaxy1" class="accordion-collapse collapse" aria-labelledby="headingGalaxy1"
                     data-bs-parent="#galaxiesAccordion">
@@ -34,10 +36,14 @@
             <!-- Tareas -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingGalaxy2">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseGalaxy2" aria-controls="collapseGalaxy2">
-                        Tareas
-                    </button>
+                    <div class="d-flex align-items-center justify-content-between w-100">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseGalaxy2" aria-controls="collapseGalaxy2">
+                            Tareas
+                        </button>
+                        <button
+                            type="button" data-t="2" class="btn btn-sm btn-success ms-2 createStar"><i class="bi bi-plus-lg"></i></button>
+                    </div>
                 </h2>
                 <div id="collapseGalaxy2" class="accordion-collapse collapse" aria-labelledby="headingGalaxy2"
                     data-bs-parent="#galaxiesAccordion">
@@ -47,13 +53,18 @@
                     </div>
                 </div>
             </div>
+
             <!-- Recursos -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingGalaxy3">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseGalaxy3" aria-controls="collapseGalaxy3">
-                       Recursos
-                    </button>
+                    <div class="d-flex align-items-center justify-content-between w-100">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseGalaxy3" aria-controls="collapseGalaxy3">
+                            Recursos
+                        </button>
+                        <button
+                            type="button" data-t="3" class="btn btn-sm btn-success ms-2 createStar"><i class="bi bi-plus-lg"></i></button>
+                    </div>
                 </h2>
                 <div id="collapseGalaxy3" class="accordion-collapse collapse" aria-labelledby="headingGalaxy3"
                     data-bs-parent="#galaxiesAccordion">
@@ -65,4 +76,6 @@
             </div>
         </div>
     </div>
+</div>
+
 </div>
