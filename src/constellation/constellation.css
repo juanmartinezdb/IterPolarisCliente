@@ -1,27 +1,25 @@
-.logonav {
-    max-height: 50px;
-}
+/* //REVISAR ENTERO */
 
 .logo {
     height: 40px;
     ;
-  }
+}
 
-  /* barra lateral */
+/* barra lateral */
 
-  .sidebar {
+.sidebar {
     width: 100%;
-  }
+}
 
-  .accordion-body {
+.accordion-body {
     padding: 0;
-  }
+}
 
-  #map {
+#map {
     height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid #ddd;
     border-radius: 5px;
-  }
+}

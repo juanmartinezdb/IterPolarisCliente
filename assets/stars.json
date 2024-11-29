@@ -1,0 +1,168 @@
+[
+    {
+        "id": 1,
+        "tipo": "tarea",
+        "nombre": "Completar ejercicios básicos",
+        "estado": false,
+        "idConstelacion": 1,
+        "descripcion": "Realizar los ejercicios del curso inicial.",
+        "energia": -5,
+        "puntos": 300,
+        "fechaLimite": "2024-12-15"
+    },
+    {
+        "id": 2,
+        "tipo": "habito",
+        "nombre": "Repasar conceptos diarios",
+        "estado": true,
+        "idConstelacion": 1,
+        "descripcion": "Dedicar 30 minutos al repaso de conceptos.",
+        "frecuencia": true,
+        "energia": 3,
+        "puntos": 150
+    },
+    {
+        "id": 3,
+        "tipo": "recurso",
+        "nombre": "Documentación oficial de JavaScript",
+        "estado": true,
+        "idConstelacion": 1,
+        "descripcion": "Revisar la documentación oficial cuando sea necesario.",
+        "enlace": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    },
+    {
+        "id": 4,
+        "tipo": "tarea",
+        "nombre": "Implementar un CRUD básico",
+        "estado": false,
+        "idConstelacion": 1,
+        "descripcion": "Crear una aplicación con operaciones CRUD utilizando JavaScript.",
+        "energia": 8,
+        "puntos": 500,
+        "fechaLimite": "2024-12-20"
+    },
+    {
+        "id": 5,
+        "tipo": "tarea",
+        "nombre": "Diseñar prototipo en Figma",
+        "estado": false,
+        "idConstelacion": 2,
+        "descripcion": "Crear un prototipo de la interfaz en Figma.",
+        "energia": 7,
+        "puntos": 400,
+        "fechaLimite": "2024-12-12"
+    },
+    {
+        "id": 6,
+        "tipo": "habito",
+        "nombre": "Practicar CSS avanzado",
+        "estado": true,
+        "idConstelacion": 2,
+        "descripcion": "Implementar ejercicios de CSS grid y flexbox.",
+        "frecuencia": true,
+        "energia": 3,
+        "puntos": 200
+    },
+    {
+        "id": 7,
+        "tipo": "recurso",
+        "nombre": "Guía de diseño accesible",
+        "estado": true,
+        "idConstelacion": 2,
+        "descripcion": "Revisar las pautas de accesibilidad web.",
+        "enlace": "https://www.w3.org/WAI/"
+    },
+    {
+        "id": 8,
+        "tipo": "tarea",
+        "nombre": "Configurar servidor Express",
+        "estado": false,
+        "idConstelacion": 3,
+        "descripcion": "Crear un servidor básico con rutas en Express.",
+        "energia": 6,
+        "puntos": 300,
+        "fechaLimite": "2024-12-15"
+    },
+    {
+        "id": 9,
+        "tipo": "habito",
+        "nombre": "Revisar documentación oficial",
+        "estado": true,
+        "idConstelacion": 3,
+        "descripcion": "Leer 10 páginas de la documentación oficial cada día.",
+        "frecuencia": true,
+        "energia": 2,
+        "puntos": 100
+    },
+    {
+        "id": 10,
+        "tipo": "recurso",
+        "nombre": "Tutorial avanzado de Node.js",
+        "estado": true,
+        "idConstelacion": 3,
+        "descripcion": "Seguir un tutorial avanzado en video.",
+        "enlace": "https://www.nodejsdesignpatterns.com/"
+    },
+    {
+        "id": 11,
+        "tipo": "habito",
+        "nombre": "Reuniones semanales",
+        "estado": true,
+        "idConstelacion": 4,
+        "descripcion": "Planificar reuniones de equipo cada semana.",
+        "frecuencia": true,
+        "energia": 3,
+        "puntos": 150
+    },
+    {
+        "id": 12,
+        "tipo": "recurso",
+        "nombre": "Herramienta de gestión de tareas",
+        "estado": true,
+        "idConstelacion": 4,
+        "descripcion": "Configurar una herramienta como Trello o Asana.",
+        "enlace": "https://trello.com/"
+    },
+    {
+        "id": 13,
+        "tipo": "tarea",
+        "nombre": "Crear rutina diaria",
+        "estado": false,
+        "idConstelacion": 5,
+        "descripcion": "Definir horarios para tareas específicas.",
+        "energia": 5,
+        "puntos": 200,
+        "fechaLimite": "2024-12-07"
+    },
+    {
+        "id": 14,
+        "tipo": "recurso",
+        "nombre": "Blog sobre productividad",
+        "estado": true,
+        "idConstelacion": 5,
+        "descripcion": "Leer consejos de expertos en blogs especializados.",
+        "enlace": "https://www.productivityist.com/"
+    },
+    {
+        "id": 15,
+        "tipo": "habito",
+        "nombre": "Comer más frutas y verduras",
+        "estado": true,
+        "idConstelacion": 6,
+        "descripcion": "Incluir 5 raciones al día.",
+        "frecuencia": true,
+        "energia": 3,
+        "puntos": 100
+    },
+    {
+        "id": 16,
+        "tipo": "tarea",
+        "nombre": "Planificar comidas semanales",
+        "estado": false,
+        "idConstelacion": 6,
+        "descripcion": "Preparar un menú semanal equilibrado.",
+        "energia": 4,
+        "puntos": 150,
+        "fechaLimite": "2024-12-01"
+    }
+]

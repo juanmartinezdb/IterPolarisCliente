@@ -9,6 +9,6 @@
     "author": "Juan Martinez Martinez 2DAW IES Belen",
     "license": "ISC",
     "devDependencies": {
-        "tailwindcss": "^3.4.14"
+        
     }
 }

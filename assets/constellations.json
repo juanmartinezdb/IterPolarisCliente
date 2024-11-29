@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "galaxia": "Clase",
+      "nombre": "Estudio de JavaScript",
+      "activa": true,
+      "imagen": "../../../assets/imagesCostellations/1.png",
+      "descripcion": "Proyecto para dominar JavaScript y sus frameworks.",
+      "ubicacion": [36.721, -4.421]
+    },
+    {
+      "id": 2,
+      "galaxia": "Clase",
+      "nombre": "Diseño de interfaces web",
+      "activa": true,
+      "imagen": "../../../assets/imagesCostellations/2.png",
+      "descripcion": "Proyecto para mejorar habilidades en diseño de interfaces web.",
+      "ubicacion": [37.7739, -3.7898]
+    },
+    {
+      "id": 3,
+      "galaxia": "Clase",
+      "nombre": "Servidor con Node.js",
+      "activa": false,
+      "imagen": "../../../assets/imagesCostellations/3.png",
+      "descripcion": "Proyecto para construir un servidor completo con Node.js.",
+      "ubicacion": [38.7169, -6.3165]
+    },
+    {
+      "id": 4,
+      "galaxia": "Trabajo",
+      "nombre": "Gestión de equipo",
+      "activa": true,
+      "imagen": "../../../assets/imagesCostellations/4.png",
+      "descripcion": "Proyecto para mejorar la organización y comunicación en el equipo.",
+      "ubicacion": [40.4168, -3.7038]
+    },
+    {
+      "id": 5,
+      "galaxia": "Trabajo",
+      "nombre": "Mejorar productividad personal",
+      "activa": true,
+      "imagen": "../../../assets/imagesCostellations/5.png",
+      "descripcion": "Proyecto para maximizar el rendimiento laboral.",
+      "ubicacion": [39.4702, -0.3768]
+    },
+    {
+      "id": 6,
+      "galaxia": "Salud",
+      "nombre": "Alimentación saludable",
+      "activa": true,
+      "imagen": "../../../assets/imagesCostellations/6.png",
+      "descripcion": "Mejorar la dieta para un estilo de vida más saludable.",
+      "ubicacion": [41.3879, 2.16992]
+    }
+  ]
+  

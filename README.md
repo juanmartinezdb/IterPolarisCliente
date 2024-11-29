@@ -8,13 +8,12 @@ The project consists of building a CRUD structure with a 1:N relationship betwee
 ```
 ITERPOLARISCLIENTE/
 ├── assets/                # JSON files with data of constellations and stars
+│   ├── imagesCostellation/
 │   ├── constellations.json
 │   └── stars.json
 │
 ├── css/                   # General style files
 │   └── main.css
-│   └── input.css          #directives for tailwind
-│   └── output.css         #tailwind Classes 
 │
 ├── src/                   # Application source code
 │   ├── constellation/     # Constellations module
@@ -38,22 +37,6 @@ ITERPOLARISCLIENTE/
 │   │   └── starController.js
 │
 ├── package.json           # Project configuration and dependencies
-├── tailwind.config.js    
 └── README.md              # Project documentation
 ```
-
-## Daily Update Log
-
-- **12/11/2024**: Project creation and base structure. 
-                    TailWind CLI added.
-
-## Notes:
--To Start Tailwind Builder for the CSS Output:
-`npx tailwindcss -i ./css/input.css -o ./css/output.css --watch    `
-
-- To minify  CSS:
-`npx tailwindcss -o build.css --minify`
-
--Tailwind cheetsheet:
-https://www.creative-tim.com/twcomponents/cheatsheet
 
